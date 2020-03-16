@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+</head>
+<body>
+
+
+
+<form class="upload-form" id="upload-select-image" method="post"
+      enctype="multipart/form-data"
+      autocomplete="off">
+  <div class="upload-image">
+    <input type="file" id="upload-file" class="upload-input" name="filename" required>
+    <label class="upload-file upload-control" for="upload-file"></label>
+  </div>
+
+  <div class="upload-overlay hidden">
+    <div class="upload-effect">
+      <div class="upload-effect__container">
+        <fieldset class="upload-resize-controls">
+          <button type="button"
+                  class="upload-resize-control upload-resize-controls-button upload-resize-controls-button-dec">–
+          </button><!--
+          --><input type="text" class="upload-resize-control upload-resize-controls-value" value="55%" readonly title="Image Scale" name="scale"/><!--
+          --><button type="button"
+                  class="upload-resize-control upload-resize-controls-button upload-resize-controls-button-inc">+
+          </button>
+        </fieldset>
+
+        <div class="upload-form-preview">
+          <div></div>
+          <img src="img/upload-default-image.jpg" class="effect-image-preview">
+        </div>
+
+
+        <input class="upload-form-hashtags" name="hashtags" placeholder="#хэш-тег">
+
+        <textarea class="upload-form-description" name="description" placeholder="Ваш комментарий..."></textarea>
+
+        <button class="upload-form-cancel" type="reset" id="upload-cancel"></button>
+        <button class="upload-form-submit" type="submit" id="upload-submit">Отправить</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="upload-message hidden">
+    <div class="upload-message-container"></div>
+  </div>
+</form>
+
+<div class="pictures container" style="font-size: 12px;">
+</div>
+
+
+
+
+
+
+
+
+<template id="picture-template" style="display: none">
+  <a href="" class="picture">
+    <img src="" class="picture-img" width="182" height="182">
+    <span class="picture-stats">
+      <span class="picture-stat picture-comments"></span>
+      <span class="picture-stat picture-likes"></span>
+    </span>
+  </a>
+</template>
+
+
+<script src="js/picture-data.js"></script>
+<script src="js/big-picture-show.js"></script>
+ <script src="js/resize.js"></script> 
+<script src="js/filters.js"></script>
+<script src="js/main.js"></script>
+<script src="js/picture-editor.js"></script>
+<script src="js/load-picture.js"></script>
+
+</body>
+</html>
